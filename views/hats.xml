@@ -1,34 +1,30 @@
 <odoo>
   <data>
-<!--
-    <menuitem id="worms_hats_menu_" name="OdooGedon" action="library_book_action" parent="menu_library_top_level" sequence="5" />
 
-    <record id="library_book_view_form" model="ir.ui.view">
-      <field name="name">Library Book Form</field>
-      <field name="model">almi.library.book</field>
+    <act_window id="worms_hats_action" name="Hats" res_model="almibaren.worms.hats" />
+    <act_window id="worms_user_action" name="Users" res_model="almibaren.worms.user" view_mode="tree,form"/>
+
+    <menuitem id="worms_hats_menu_parent" name="OdooGedon" />
+   <menuitem id="worms_hats_menu_nvl1" name="Hats" action="worms_hats_action" parent="worms_hats_menu_parent" />
+    <menuitem id="worms_hats_menu_nvl2" name="Users" action="worms_user_action" parent="worms_hats_menu_parent" />
+
+    <record id="worms_hats_view_form" model="ir.ui.view">
+      <field name="name">Hats Form</field>
+      <field name="model">almibaren.worms.hats</field>
       <field name="arch" type="xml">
         <form>
           <group>
             <field name="short_name"/>
             <field name="name" />
-            <field name="author_ids" widget="many2many_tags"/>
-            <field name="notes" />
             <field name="description" />
+            <field name="prize" />
             <field name="cover" />
-            <field name="pages" />
-            <field name="reader_rating" />
-            <field name="publisher_id" />
-          </group>
-          <group>
+            <field name="rating" />
             <field name="date_release" />
-            <field name="state" />
-            <field name="out_of_print" />
-            <field name="date_updated" />
           </group>
         </form>
       </field>
     </record>
 
-  -->
   </data>
 </odoo>
