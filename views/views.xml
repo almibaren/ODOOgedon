@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="odoogedon.list">
+      <field name="name">Odoogedon list</field>
+      <field name="model">odoogedon.odoogedon</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="odoogedon.action_window">
+      <field name="name">Odoogedon window</field>
+      <field name="res_model">odoogedon.odoogedon</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="odoogedon.action_server">
+      <field name="name">Odoogedon server</field>
+      <field name="model_id" ref="model_odoogedon_odoogedon"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="Odoogedon" id="odoogedon.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="odoogedon.menu_1" parent="odoogedon.menu_root"/>
+    <menuitem name="Menu 2" id="odoogedon.menu_2" parent="odoogedon.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="odoogedon.menu_1_list" parent="odoogedon.menu_1"
+              action="odoogedon.action_window"/>
+    <menuitem name="Server to list" id="odoogedon" parent="odoogedon.menu_2"
+              action="odoogedon.action_server"/>
+    -->
+  </data>
+</odoo>

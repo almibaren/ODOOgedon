@@ -1,0 +1,34 @@
+<odoo>
+  <data>
+<!--
+    <menuitem id="worms_hats_menu_" name="OdooGedon" action="library_book_action" parent="menu_library_top_level" sequence="5" />
+
+    <record id="library_book_view_form" model="ir.ui.view">
+      <field name="name">Library Book Form</field>
+      <field name="model">almi.library.book</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="short_name"/>
+            <field name="name" />
+            <field name="author_ids" widget="many2many_tags"/>
+            <field name="notes" />
+            <field name="description" />
+            <field name="cover" />
+            <field name="pages" />
+            <field name="reader_rating" />
+            <field name="publisher_id" />
+          </group>
+          <group>
+            <field name="date_release" />
+            <field name="state" />
+            <field name="out_of_print" />
+            <field name="date_updated" />
+          </group>
+        </form>
+      </field>
+    </record>
+
+  -->
+  </data>
+</odoo>
