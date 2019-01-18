@@ -2,3 +2,4 @@
 
 from . import hats
 from . import users
+from . import images

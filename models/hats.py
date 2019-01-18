@@ -10,5 +10,5 @@ class Hats(models.Model):
     date_release = fields.Date('Release Date')
     description = fields.Html('Descripcion', sanitize=True, strip_style = True, translate = False)
     prize = fields.Float('Precio',(3,1))
-    cover = fields.Binary('Imagen')
+    cover = fields.Many2many('almibaren.worms.images',String="Imagen")
     rating = fields.Float('Valoración', (3, 1))
