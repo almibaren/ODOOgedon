@@ -10,7 +10,7 @@
     <menuitem id="worms_hats_menu_nvl2" name="Users" action="worms_user_action" parent="worms_hats_menu_parent"/>
     <menuitem id="worms_hats_menu_nvl3" name="Grafico" action="worms_graph_action" parent="worms_hats_menu_parent"/>
 
-    <record id="worms_hats_view_form" model="ir.ui.view">
+  <!--  <record id="worms_hats_view_form" model="ir.ui.view">
       <field name="name">Hats Form</field>
       <field name="model">almibaren.worms.hats</field>
       <field name="arch" type="xml">
@@ -27,6 +27,37 @@
           </group>
         </form>
       </field>
+    </record> -->
+
+    <record model="ir.ui.view" id="My_kanban">
+        <field name="name">Kanban</field>
+        <field name="model">almibaren.worms.hats</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id"/>
+                <field name="name"/>
+                <field name="prize"/>
+                <field name="cover"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_vignette oe_semantic_html_override">
+                            <a type="open"><img t-att-src="kanban_image('almibaren_worms_hats', 'cover', record.id.value)" class="oe_kanban_image"/></a>
+                            <div class="oe_kanban_details">
+                                <h4>
+                                    <a type="open">
+                                         <field name="name"/>
+                                    </a>
+                                </h4>
+                                <div name="tags"/>
+                                <ul>
+                                    <li>Price: <field name="prize"></field></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
     </record>
 
     <record id="graph_sales" model="ir.ui.view">
@@ -38,6 +69,12 @@
           <field name="sales" type="measure"/>
         </graph>
       </field>
+    </record>
+
+    <record id="action_kanban" model="ir.actions.act_window.view">
+      <field name="act_window_id" ref="worms_hats_action"/>
+      <field name="view_id" ref="My_kanban"/>
+      <field name="view_mode">kanban</field>
     </record>
 
     <record id="action_graph_sales" model="ir.actions.act_window.view">
